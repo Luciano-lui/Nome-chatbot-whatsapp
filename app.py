@@ -45,22 +45,22 @@ Como posso ajudar?
 Digite uma opção:
 
 1 - Horário de atendimento
-2 - Endereço
-3 - Preços
-4 - Falar com atendente
+2 - Informações sobre a sessão
+3 - Valor da sessão
+4 - Falar com a/o Psicóloga(o)
 """
 
     elif mensagem == "1":
-        resposta = "Nosso horário de atendimento é de segunda a sexta, das 8h às 18h."
+        resposta = "Nosso horário de atendimento é de segunda a sexta, das 9h às 17h."
 
     elif mensagem == "2":
-        resposta = "Nosso endereço é: Rua Exemplo, 123 - Centro."
+        resposta = "O atendimento é apenas online. Cada sessão tem duração de 45 minutos."
 
     elif mensagem == "3":
-        resposta = "Nossos preços começam a partir de R$ 50,00."
+        resposta = "O valor da sessão é R$ 300,00."
 
     elif mensagem == "4":
-        resposta = "Certo! Um atendente vai te chamar em breve."
+        resposta = "Certo! A/o Psicóloga(o) vai entrar em contato em breve."
 
     else:
         resposta = """
