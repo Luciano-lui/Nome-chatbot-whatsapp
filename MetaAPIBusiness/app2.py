@@ -28,18 +28,15 @@ def enviar_whatsapp(numero, mensagem):
     print("ENVIO META:", response.status_code, response.text)
 
 
-@app.route("/", methods=["GET"])
-def home():
-    return "Bot online - Meta WhatsApp Cloud API!"
-
-
 @app.route("/webhook", methods=["GET"])
 def verificar_webhook():
     mode = request.args.get("hub.mode")
     token = request.args.get("hub.verify_token")
     challenge = request.args.get("hub.challenge")
 
-    if mode == "subscribe" and token == VERIFY_TOKEN:
+    verify_token = os.getenv("VERIFY_TOKEN", "psi_chatbot_123")
+
+    if mode == "subscribe" and token == verify_token:
         return challenge, 200
 
     return "Token inválido", 403
