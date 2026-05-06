@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: cd chatbot_cliente && gunicorn app:app
